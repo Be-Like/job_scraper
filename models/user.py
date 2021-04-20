@@ -11,5 +11,17 @@ class UserModel(db.Model):
     self.email = email
     self.password = password
 
-  def __repr__(self):
-    return '<id {}>'.format(self.id)
+  # def __repr__(self):
+  #   return '<id {}>'.format(self.id)
+
+  def save_to_db(self):
+    db.session.add(self)
+    db.session.commit()
+
+  @classmethod
+  def find_by_username(cls, email): # username mapping
+    return cls.query.filter_by(email = email).first()
+
+  @classmethod
+  def find_by_id(cls, _id): # userid mapping
+    return cls.query.filter_by(id = _id).first()
