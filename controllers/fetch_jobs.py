@@ -13,4 +13,3 @@ class FetchJobs(Resource):
   Uses scrapy to fetch job postings from various job boards
   """
 
-  FetchJobs
