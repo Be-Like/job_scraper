@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from flask import Flask
-from flask_migrate import Migrate
+# from flask_migrate import Migrate
 from flask_restful import Api
 from flask_jwt import JWT
 
@@ -28,8 +28,8 @@ db.init_app(app)
 router.init_app(app)
 
 
-migrate = Migrate()
-migrate.init_app(app, db)
+# migrate = Migrate()
+# migrate.init_app(app, db)
 
 
 print(os.environ['FLASK_APP'])

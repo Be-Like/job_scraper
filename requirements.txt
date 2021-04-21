@@ -2,6 +2,7 @@ Flask
 Flask-JWT
 Flask-Migrate
 Flask-RESTful
+Flask-Script
 Flask-SQLAlchemy
 psycopg2
 python-dotenv

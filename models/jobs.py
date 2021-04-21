@@ -34,3 +34,7 @@ class JobModel(db.Model):
   location = db.Column(db.String())
   source = db.Column(db.String())
   url = db.Column(db.String(), unique = True)
+
+  def save_to_db(self):
+    db.session.add(self)
+    db.session.commit()
